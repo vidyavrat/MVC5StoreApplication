@@ -1,0 +1,22 @@
+﻿@model MVC5StoreApp.Models.Genre
+
+@{
+    ViewBag.Title = "Browse Items";
+}
+
+<div class="genre">
+    <h2><em>@Model.Name</em>Items</h2>
+
+    <ul id="item-list">
+        @foreach (var item in Model.Items)
+        {
+            <li>
+                <a href="@Url.Action("Details", new { id = item.ItemId})">
+                    <span>@item.Title</span>
+                </a>
+            </li>            
+        }
+    </ul>
+</div>
+
+
