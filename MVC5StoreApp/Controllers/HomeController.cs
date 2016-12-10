@@ -11,8 +11,8 @@ namespace MVC5StoreApp.Controllers
 
         public ActionResult Index()
         {
-            var items = GetTopSellingItems(10);
-            return View(items);
+            //var items = GetTopSellingItems(10);
+            return View();
         }
 
         public ActionResult About()
@@ -31,9 +31,9 @@ namespace MVC5StoreApp.Controllers
 
         // Group the order details by Item and 
         // Return the Items with the Higest count
-        private List<Item> GetTopSellingItems(int count)
-        {
-            return storeDb.Items.OrderByDescending(i => i.OrderDetails.Count()).Take(count).ToList();
-        }
+        //private List<Item> GetTopSellingItems(int count)
+        //{
+        //    return storeDb.Items.OrderByDescending(i => i.OrderDetails.Count()).Take(count).ToList();
+        //}
     }
 }
